@@ -1,0 +1,13 @@
+<project name="kuqs.socket" default="ideajar" basedir=".">
+	<property name="java.home" value="${env.JAVA_HOME}" />
+	<property name="dist.path" location="dist" />
+	<property name="build.path" location="build" />
+    <property name="idea.out.path" location="out/production/socket/" />
+
+
+	<target name="ideajar" description="Generate kuqs.socket jar">
+		<jar jarfile="${dist.path}/kuqs.socket.jar">
+			<fileset dir="${idea.out.path}" />
+		</jar>
+	</target>
+</project>

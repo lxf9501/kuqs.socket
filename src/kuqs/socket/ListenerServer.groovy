@@ -10,8 +10,8 @@ import kuqs.tool.SocketUtils
 class ListenerServer {
     Socket socket;
 
-    ListenerServer(String ip) {
-        socket = new Socket(ip, 2533)
+    ListenerServer(String ip, int port) {
+        socket = new Socket(ip, port)
     }
 
     void sentCommand(byte[] bs) {
@@ -25,7 +25,6 @@ class ListenerServer {
             dos.flush()
 
             byte[] buffers = new byte[3]
-            SocketUtils.re
             dis.read(buffers)
             println buffers
         }
